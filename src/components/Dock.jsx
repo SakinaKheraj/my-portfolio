@@ -40,7 +40,7 @@ const Dock = () => {
 
         const resetIcons = () =>
             icons.forEach((icon) =>
-                gsap.to(icon, { 
+                gsap.to(icon, {
                     scale: 1,
                     y: 0,
                     duration: 0.3,
@@ -58,16 +58,22 @@ const Dock = () => {
 
 
     const toggleApp = (app) => {
-        if(!app.canOpen) return;
+        if (!app.canOpen) return;
 
         const window = windows[app.id];
+
         if (window.isOpen) {
-            closeWindow(app.id);
+            if (window.isMinimized) {
+                openWindow(app.id);
+            } else {
+                // If already open and focused, maybe minimize? 
+                // For now, let's just focus it to be safe, or toggle close if that's the desired behavior.
+                // The original code toggled closeWindow.
+                closeWindow(app.id);
+            }
         } else {
             openWindow(app.id);
         }
-
-        console.log(windows);
     };
 
     return (

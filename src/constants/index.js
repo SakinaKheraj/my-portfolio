@@ -74,28 +74,30 @@ const dockApps = [
   },
 ];
 
-const blogPosts = [
+const journalEntries = [
   {
     id: 1,
-    date: "Sep 2, 2025",
-    title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+    date: "Feb 24, 2026",
+    title: "The Magic of GSAP: Making the Web Move",
+    image: "/icons/notion/sparkles.png",
+    link: "#",
+    tag: "Development",
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    date: "Feb 20, 2026",
+    title: "Morning Routine: Coffee & Clean Code",
+    image: "/icons/notion/coffee.png",
+    link: "#",
+    tag: "Life",
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    date: "Feb 15, 2026",
+    title: "Why Minimalism in UI is Harder Than It Looks",
+    image: "/icons/notion/design.png",
+    link: "#",
+    tag: "Design",
   },
 ];
 
@@ -204,7 +206,7 @@ export {
   navLinks,
   navIcons,
   dockApps,
-  blogPosts,
+  journalEntries,
   techStack,
   socials,
   photosLinks,
@@ -221,7 +223,7 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
+      name: "SeekrAI",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
@@ -229,7 +231,7 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
+          name: "SeekrAI.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
@@ -243,7 +245,7 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "nike.com",
+          name: "seekrai.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
@@ -252,7 +254,7 @@ const WORK_LOCATION = {
         },
         {
           id: 4,
-          name: "nike.png",
+          name: "seekrai.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
@@ -274,7 +276,7 @@ const WORK_LOCATION = {
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "InvenTrack",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
@@ -282,7 +284,7 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
+          name: "InvenTrack.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
@@ -296,7 +298,7 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
+          name: "inventrack.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
@@ -305,7 +307,7 @@ const WORK_LOCATION = {
         },
         {
           id: 4,
-          name: "ai-resume-analyzer.png",
+          name: "inventrack.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",

@@ -119,43 +119,75 @@ body {
   }
 
   #safari {
-    @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden min-h-[500px];
 
     .search {
-      @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
+      @apply flex items-center gap-3 w-2/3 bg-gray-100 border border-transparent rounded-lg px-3 py-1.5 focus-within:bg-white focus-within:border-blue-400 transition-all;
 
       input {
-        @apply placeholder:text-gray-400;
+        @apply placeholder:text-gray-400 text-xs;
       }
     }
 
-    .blog {
-      @apply bg-white p-10 max-w-3xl mx-auto;
+    .notion-container {
+      @apply bg-white p-12 max-w-3xl mx-auto h-[500px] overflow-y-auto scroll-smooth;
 
-      h2 {
-        @apply text-xl font-bold text-pink-600 mb-10;
+      &::-webkit-scrollbar {
+        @apply w-1.5;
       }
 
-      .blog-post {
-        @apply grid grid-cols-12 space-x-5;
+      &::-webkit-scrollbar-track {
+        @apply bg-transparent;
+      }
 
-        img {
-          @apply size-full rounded-md object-cover;
+      &::-webkit-scrollbar-thumb {
+        @apply bg-gray-200 rounded-full hover:bg-gray-300 transition-colors;
+      }
+
+      .notion-header {
+        @apply mb-10;
+
+        .notion-icon {
+          @apply text-5xl mb-4;
         }
 
-        .content {
-          @apply col-span-10 space-y-3;
+        h1 {
+          @apply text-4xl font-bold text-gray-900 mb-2;
+        }
 
-          p {
-            @apply text-xs text-gray-500;
+        .notion-subtitle {
+          @apply text-gray-500 text-lg;
+        }
+      }
+
+      .notion-content {
+        @apply space-y-4;
+
+        .notion-entry {
+          @apply p-5 rounded-lg border border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer;
+
+          .entry-header {
+            @apply flex items-center gap-3 mb-2;
+
+            .entry-tag {
+              @apply px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-medium rounded uppercase tracking-wider;
+            }
+
+            .entry-date {
+              @apply text-gray-400 text-[11px];
+            }
           }
 
-          h3 {
-            @apply font-semibold text-base text-gray-800;
+          .entry-title {
+            @apply text-lg font-semibold text-gray-800 mb-3;
           }
 
-          a {
-            @apply text-blue-600 text-xs hover:underline flex items-center gap-3;
+          .entry-footer {
+            @apply flex items-center;
+
+            .entry-link {
+              @apply text-gray-400 text-xs font-medium flex items-center gap-1 hover:text-gray-900 transition-colors;
+            }
           }
         }
       }

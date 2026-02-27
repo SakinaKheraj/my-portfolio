@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useRef } from 'react'
-import useWindowStore from '#components/store/window';
+import useWindowStore from '#store/window';
 import { useGSAP } from '@gsap/react';
 import gsap from "gsap";
 import { Draggable } from 'gsap/Draggable';
@@ -9,6 +9,13 @@ const WindowWrapper = (Component, windowKey) => {
         const { focusWindow, windows } = useWindowStore();
         const { isOpen, zIndex, isMinimized, isMaximized } = windows[windowKey];
         const ref = useRef(null);
+
+        useLayoutEffect(() => {
+            if (ref.current && !isOpen) {
+                ref.current.style.display = "none";
+            }
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, []);
 
         useGSAP(() => {
             const el = ref.current;

@@ -2,11 +2,13 @@ import { useRef } from 'react';
 import { Tooltip } from 'react-tooltip';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { dockApps } from '#constants';
-import useWindowStore from './store/window.js';
+import { dockApps, locations } from '#constants';
+import useWindowStore from '../store/window.js';
+import useLocationStore from '../store/location.js';
 
 const Dock = () => {
     const { openWindow, closeWindow, windows } = useWindowStore();
+    const { setActiveLocation } = useLocationStore();
     const dockRef = useRef(null);
 
     useGSAP(() => {
@@ -60,15 +62,17 @@ const Dock = () => {
     const toggleApp = (app) => {
         if (!app.canOpen) return;
 
+        if (app.id === 'trash') {
+            openWindow('trash');
+            return;
+        }
+
         const window = windows[app.id];
 
         if (window.isOpen) {
             if (window.isMinimized) {
                 openWindow(app.id);
             } else {
-                // If already open and focused, maybe minimize? 
-                // For now, let's just focus it to be safe, or toggle close if that's the desired behavior.
-                // The original code toggled closeWindow.
                 closeWindow(app.id);
             }
         } else {

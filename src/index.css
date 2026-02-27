@@ -6,7 +6,8 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/wallpaper.png");
+  background-image: url("/images/wallpaper.jpg");
+  background-color: #1a1a1a;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -382,15 +383,15 @@ body {
     }
   }
 
-  #txtfile {
-    @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+  #text {
+    @apply w-xl absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
     }
   }
 
-  #imgfile {
+  #image {
     @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     #window-header {
@@ -404,6 +405,88 @@ body {
 
       img {
         @apply w-full h-fit object-contain object-center;
+      }
+    }
+  }
+
+  #contact {
+    @apply w-[600px] absolute top-1/4 left-1/2 -translate-x-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+
+    #window-header {
+      h2 {
+        @apply font-bold text-sm text-center flex-1;
+      }
+    }
+
+    .contact-horizontal {
+      @apply flex h-[350px] border-t border-gray-100;
+
+      .profile-sidebar {
+        @apply w-[45%] p-8 border-r border-gray-100 flex flex-col items-center text-center;
+
+        .avatar-box {
+          @apply relative mb-4;
+
+          .avatar-img {
+            @apply size-20 rounded-full border-2 border-white shadow-md;
+          }
+
+          .status-badge {
+            @apply absolute bottom-0 right-0 bg-green-500 text-white text-[8px] font-black px-2 py-0.5 rounded-full border-2 border-white shadow-sm;
+          }
+        }
+
+        .meta-info {
+          @apply flex-1;
+
+          h3 {
+            @apply text-xl font-black text-gray-900;
+          }
+
+          .title {
+            @apply text-xs font-bold text-blue-600 uppercase tracking-tight mb-2;
+          }
+
+          .bio {
+            @apply text-xs text-gray-500 leading-relaxed px-2;
+          }
+        }
+
+        .email-button {
+          @apply mt-4 flex items-center gap-2 bg-gray-900 text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-all hover:bg-black hover:scale-105 active:scale-95;
+        }
+      }
+
+      .links-panel {
+        @apply flex-1 p-8 bg-gray-50/30 flex flex-col;
+
+        .section-label {
+          @apply text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4;
+        }
+
+        .social-links-list {
+          @apply space-y-3 overflow-y-auto pr-2;
+
+          .social-item {
+            @apply flex items-center gap-4 p-3 bg-white rounded-2xl border border-gray-100 shadow-sm transition-all hover:border-[var(--brand-color)] hover:shadow-md;
+
+            .social-icon-box {
+              @apply size-9 flex items-center justify-center rounded-xl bg-[var(--brand-color)]/10;
+
+              .icon-img {
+                @apply size-5 transition-transform group-hover:scale-110;
+              }
+            }
+
+            .social-text {
+              @apply flex-1 text-sm font-bold text-gray-700;
+            }
+
+            .social-arrow {
+              @apply text-gray-300 transition-colors group-hover:text-[var(--brand-color)];
+            }
+          }
+        }
       }
     }
   }

@@ -49,12 +49,6 @@ const dockApps = [
     canOpen: true,
   },
   {
-    id: "photos",
-    name: "Gallery", // was "Photos"
-    icon: "photos.png",
-    canOpen: true,
-  },
-  {
     id: "contact",
     name: "Contact", // or "Get in touch"
     icon: "contact.png",
@@ -70,34 +64,31 @@ const dockApps = [
     id: "trash",
     name: "Archive", // was "Trash"
     icon: "trash.png",
-    canOpen: false,
+    canOpen: true,
   },
 ];
 
 const journalEntries = [
   {
     id: 1,
-    date: "Feb 24, 2026",
-    title: "The Magic of GSAP: Making the Web Move",
-    image: "/icons/notion/sparkles.png",
-    link: "#",
-    tag: "Development",
+    date: "Feb 22, 2026",
+    title: "debug.log",
+    link: "https://www.notion.so/debug-log-b618ea8a859d44ee903ec6d788abb29c?source=copy_link",
+    tag: "Development • Life • Growth",
   },
   {
     id: 2,
-    date: "Feb 20, 2026",
-    title: "Morning Routine: Coffee & Clean Code",
-    image: "/icons/notion/coffee.png",
-    link: "#",
-    tag: "Life",
+    date: "Feb 17, 2026",
+    title: "Midnight-builds",
+    link: "https://www.notion.so/midnight-builds-d0d892d6a50246a0a308ee7bd7099a81?source=copy_link",
+    tag: "Life • Philosophy",
   },
   {
     id: 3,
-    date: "Feb 15, 2026",
-    title: "Why Minimalism in UI is Harder Than It Looks",
-    image: "/icons/notion/design.png",
-    link: "#",
-    tag: "Design",
+    date: "Feb 12, 2026",
+    title: "version-history",
+    link: "https://www.notion.so/version-history-d2509782c5094635a865a02a11b6fbd1?source=copy_link",
+    tag: "Growth • Systems",
   },
 ];
 
@@ -129,29 +120,22 @@ const socials = [
     id: 1,
     text: "Github",
     icon: "/icons/github.svg",
-    bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    bg: "#0a8064ff",
+    link: "https://github.com/SakinaKheraj",
   },
   {
     id: 2,
-    text: "Platform",
-    icon: "/icons/atom.svg",
-    bg: "#4bcb63",
-    link: "https://jsmastery.com/",
+    text: "Twitter/X",
+    icon: "/icons/twitter.svg",
+    bg: "#103076ff",
+    link: "https://x.com/Sakina132",
   },
   {
     id: 3,
-    text: "Twitter/X",
-    icon: "/icons/twitter.svg",
-    bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
-  },
-  {
-    id: 4,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
-    bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+    bg: "#571078ff",
+    link: "www.linkedin.com/in/sakinakheraj",
   },
 ];
 
@@ -237,21 +221,21 @@ const WORK_LOCATION = {
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+            "SeekrAI is a structured AI chatbot built around intentional interaction.",
+            "Each user is allowed 10 sessions per day, promoting focused and meaningful conversations.",
+            "The application handles session tracking, controlled access logic, and smooth conversational flow.",
+            "Tech Stack: Flutter, Firebase, Dart, Gemini API Integration, Pydantic Models, FastAPI."
           ],
         },
-        {
-          id: 2,
-          name: "seekrai.com",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
-          position: "top-10 right-20",
-        },
+        // {
+        //   id: 2,
+        //   name: "seekrai.com",
+        //   icon: "/images/safari.png",
+        //   kind: "file",
+        //   fileType: "url",
+        //   href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+        //   position: "top-10 right-20",
+        // },
         {
           id: 4,
           name: "seekrai.png",
@@ -260,15 +244,6 @@ const WORK_LOCATION = {
           fileType: "img",
           position: "top-52 right-80",
           imageUrl: "/images/project-1.png",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
         },
       ],
     },
@@ -462,21 +437,17 @@ const TRASH_LOCATION = {
   children: [
     {
       id: 1,
-      name: "trash1.png",
-      icon: "/images/image.png",
+      name: "Secret_Note.txt",
+      icon: "/images/txt.png",
       kind: "file",
-      fileType: "img",
+      fileType: "txt",
       position: "top-10 left-10",
-      imageUrl: "/images/trash-1.png",
-    },
-    {
-      id: 2,
-      name: "trash2.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-40 left-80",
-      imageUrl: "/images/trash-2.png",
+      description: [
+        "You caught me! 🕵️‍♂️",
+        "If you're looking for someone with this much attention to detail (who even checks the trash?), let's chat.",
+        "I believe that every part of a product matters—even the ones most people never see.",
+        "Let's build something great together!",
+      ],
     },
   ],
 };
@@ -494,11 +465,11 @@ const WINDOW_CONFIG = {
   finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  trash: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  text: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  image: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

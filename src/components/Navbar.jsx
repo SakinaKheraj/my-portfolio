@@ -1,6 +1,6 @@
-import dayjs from  "dayjs"
+import dayjs from "dayjs"
 import { navIcons, navLinks } from "#constants"
-import useWindowStore from "./store/window"
+import useWindowStore from "../store/window"
 
 const Navbar = () => {
     const { openWindow } = useWindowStore();

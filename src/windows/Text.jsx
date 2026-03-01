@@ -29,16 +29,30 @@ const Text = () => {
                 )}
 
                 <div className="space-y-4">
-                    {Array.isArray(data?.description)
-                        ? data.description.map((para, i) => (
-                            <p key={i} className="leading-relaxed text-sm text-gray-600">
-                                {para}
-                            </p>
-                        ))
-                        : data?.description
-                            ? <p className="leading-relaxed text-sm text-gray-600">{data.description}</p>
-                            : <p className="text-sm text-gray-400 italic">No content to display.</p>
-                    }
+                    {(() => {
+                        const parseText = (text) => {
+                            if (typeof text !== 'string') return text;
+                            const parts = text.split(/(\*\*.*?\*\*)/g);
+                            return parts.map((part, i) => {
+                                if (part.startsWith('**') && part.endsWith('**')) {
+                                    return <strong key={i} className="font-bold text-gray-900">{part.slice(2, -2)}</strong>;
+                                }
+                                return part;
+                            });
+                        };
+
+                        if (Array.isArray(data?.description)) {
+                            return data.description.map((para, i) => (
+                                <p key={i} className="leading-relaxed text-sm text-gray-600">
+                                    {parseText(para)}
+                                </p>
+                            ));
+                        } else if (data?.description) {
+                            return <p className="leading-relaxed text-sm text-gray-600">{parseText(data.description)}</p>;
+                        } else {
+                            return <p className="text-sm text-gray-400 italic">No content to display.</p>;
+                        }
+                    })()}
                 </div>
             </div>
         </>

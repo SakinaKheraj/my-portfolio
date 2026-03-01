@@ -14,6 +14,7 @@ const Finder = () => {
         if (item.fileType === "pdf") return openWindow('resume');
         if (item.fileType === "txt") return openWindow('text', item);
         if (item.fileType === "img") return openWindow('image', item);
+        if (item.fileType === "fig" && item.href) return window.open(item.href, "_blank");
         if (item.kind === "folder") return setActiveLocation(item);
     }
 

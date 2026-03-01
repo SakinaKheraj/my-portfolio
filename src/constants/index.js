@@ -103,15 +103,15 @@ const techStack = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express.js", "PHP"],
+    items: ["Go", "PHP", "Node.js", "FastAPI"],
   },
   {
     category: "Database",
-    items: ["MongoDB", "MySQL", "Firebase", "Supabase"],
+    items: ["PostgreSQL", "MySQL", "Firebase", "Supabase"],
   },
   {
     category: "Tools",
-    items: ["Git", "GitHub"],
+    items: ["Git", "GitHub", "Figma"],
   },
 ];
 
@@ -167,24 +167,6 @@ const photosLinks = [
   },
 ];
 
-const gallery = [
-  {
-    id: 1,
-    img: "/images/gal1.png",
-  },
-  {
-    id: 2,
-    img: "/images/gal2.png",
-  },
-  {
-    id: 3,
-    img: "/images/gal3.png",
-  },
-  {
-    id: 4,
-    img: "/images/gal4.png",
-  },
-];
 
 export {
   navLinks,
@@ -194,7 +176,6 @@ export {
   techStack,
   socials,
   photosLinks,
-  gallery,
 };
 
 const WORK_LOCATION = {
@@ -221,10 +202,10 @@ const WORK_LOCATION = {
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "SeekrAI is a structured AI chatbot built around intentional interaction.",
-            "Each user is allowed 10 sessions per day, promoting focused and meaningful conversations.",
-            "The application handles session tracking, controlled access logic, and smooth conversational flow.",
-            "Tech Stack: Flutter, Firebase, Dart, Gemini API Integration, Pydantic Models, FastAPI."
+            "SeekrAI is a **structured AI chatbot** built around intentional and focused interaction.",
+            "Each user is allowed **10 sessions per day**, promoting meaningful and distraction-free conversations.",
+            "The application handles **session tracking, controlled access logic, and smooth conversational flow** seamlessly.",
+            "Built with **Flutter, Firebase, Dart, Gemini API Integration, Pydantic Models, and FastAPI** for a scalable and responsive experience."
           ],
         },
         // {
@@ -243,7 +224,16 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-1.png",
+          imageUrl: "/images/seekrai.png",
+        },
+        {
+          id: 5,
+          name: "seekrai.git",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://github.com/SakinaKheraj/Seekr",
+          position: "top-34 left-81",
         },
       ],
     },
@@ -265,94 +255,94 @@ const WORK_LOCATION = {
           fileType: "txt",
           position: "top-5 right-10",
           description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+            "InvenTrack is a smart AI-powered pantry manager that helps you **track groceries, monitor expiry dates, and reduce food waste effortlessly**.",
+            "It allows you to **add, edit, consume, and manage items with photos, expiry alerts, and low-stock warnings** for complete inventory control.",
+            "The built-in **AI Kitchen (powered by Google Gemini)** generates full recipes using exactly what’s available in your pantry.",
+            "Built with **Flutter, Dart, Provider, SQLite (sqflite), Google Gemini API, fl_chart, and flutter_local_notifications**, it delivers a smooth, modern, and cross-platform experience."
           ],
         },
-        {
-          id: 2,
-          name: "inventrack.com",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
-          position: "top-20 left-20",
-        },
+        // {
+        //   id: 2,
+        //   name: "inventrack.com",
+        //   icon: "/images/safari.png",
+        //   kind: "file",
+        //   fileType: "url",
+        //   // href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+        //   position: "top-10 left-20",
+        // },
         {
           id: 4,
           name: "inventrack.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
+          position: "top-12 right-94",
+          imageUrl: "/images/inventrack.png",
         },
         {
           id: 5,
-          name: "Design.fig",
+          name: "InvenTrack.git",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 left-5",
+          href: "https://github.com/SakinaKheraj/InvenTrack",
+          position: "top-51 left-30",
         },
       ],
     },
 
     // ▶ Project 3
-    {
-      id: 7,
-      name: "Food Delivery App",
-      icon: "/images/folder.png",
-      kind: "folder",
-      position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
-      children: [
-        {
-          id: 1,
-          name: "Food Delivery App Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
-          ],
-        },
-        {
-          id: 2,
-          name: "food-delivery-app.com",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
-          position: "top-10 right-20",
-        },
-        {
-          id: 4,
-          name: "food-delivery-app.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: "/images/project-3.png",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
-        },
-      ],
-    },
+    // {
+    //   id: 7,
+    //   name: "Food Delivery App",
+    //   icon: "/images/folder.png",
+    //   kind: "folder",
+    //   position: "top-10 left-80",
+    //   windowPosition: "top-[33vh] left-7",
+    //   children: [
+    //     {
+    //       id: 1,
+    //       name: "Food Delivery App Project.txt",
+    //       icon: "/images/txt.png",
+    //       kind: "file",
+    //       fileType: "txt",
+    //       position: "top-5 left-10",
+    //       description: [
+    //         "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+    //         "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+    //         "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+    //         "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+    //       ],
+    //     },
+    //     {
+    //       id: 2,
+    //       name: "food-delivery-app.com",
+    //       icon: "/images/safari.png",
+    //       kind: "file",
+    //       fileType: "url",
+    //       href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+    //       position: "top-10 right-20",
+    //     },
+    //     {
+    //       id: 4,
+    //       name: "food-delivery-app.png",
+    //       icon: "/images/image.png",
+    //       kind: "file",
+    //       fileType: "img",
+    //       position: "top-52 right-80",
+    //       imageUrl: "/images/project-3.png",
+    //     },
+    //     {
+    //       id: 5,
+    //       name: "Design.fig",
+    //       icon: "/images/plain.png",
+    //       kind: "file",
+    //       fileType: "fig",
+    //       href: "https://google.com",
+    //       position: "top-60 right-20",
+    //     },
+    //   ],
+    // },
   ],
 };
 
@@ -365,45 +355,53 @@ const ABOUT_LOCATION = {
   children: [
     {
       id: 1,
-      name: "me.png",
-      icon: "/images/image.png",
+      name: "Expertise.txt",
+      icon: "/images/txt.png",
       kind: "file",
-      fileType: "img",
+      fileType: "txt",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      description: [
+        "I specialize in building **high-performance mobile applications** using **Flutter and Dart**.",
+        "On the web, I craft **interactive and responsive interfaces** with **React**.",
+        "In the backend, I leverage **Go, Node.js, FastAPI, and PHP** to build scalable and robust systems.",
+        "I work with diverse databases including **PostgreSQL, MySQL, Firebase, and Supabase** for optimized data management."
+      ],
     },
     {
       id: 2,
-      name: "casual-me.png",
-      icon: "/images/image.png",
+      name: "Philosophy.txt",
+      icon: "/images/txt.png",
       kind: "file",
-      fileType: "img",
-      position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      fileType: "txt",
+      position: "top-28 right-56",
+      description: [
+        "I believe that **clean code** is just as important as a beautiful user interface.",
+        "My goal is to create products that are not only functional but also **delightful to use**.",
+        "I’m constantly learning and exploring new technologies to stay at the **forefront of modern development**."
+      ],
     },
-    {
-      id: 3,
-      name: "conference-me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
-    },
+    // {
+    //   id: 3,
+    //   name: "Flutter_Vision.png",
+    //   icon: "/images/image.png",
+    //   kind: "file",
+    //   fileType: "img",
+    //   position: "top-52 left-80",
+    //   imageUrl: "/images/flutter-glass.png", // We will move the generated image here
+    // },
     {
       id: 4,
       name: "about-me.txt",
       icon: "/images/txt.png",
       kind: "file",
       fileType: "txt",
-      position: "top-60 left-5",
+      position: "top-50 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "Hey! I’m **Sakina** 👋, a developer who enjoys building sleek, interactive applications that solve real-world problems.",
+        "I specialize in **Flutter, React, and Backend architecture**—crafting smooth, fast, and delightful experiences.",
+        "I’m big on **clean UI, good UX**, and writing code that is as readable as it is efficient.",
+        "Outside of dev work, you'll find me tweaking layouts at 2AM, exploring new AI tools (like Go and FastAPI), or building side projects that challenge my creativity.",
       ],
     },
   ],

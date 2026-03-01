@@ -7,8 +7,8 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
+    'pdfjs-dist/build/pdf.worker.min.mjs',
+    import.meta.url,
 ).toString();
 
 const Resume = () => {
@@ -18,20 +18,20 @@ const Resume = () => {
                 <WindowControlls target="resume" />
                 <h2>Resume.pdf</h2>
 
-                <a href="files/resume.pdf"
-                download className='cursor-pointer'
-                title='Download Resume'>
+                <a href="/files/resume.pdf"
+                    download className='cursor-pointer'
+                    title='Download Resume'>
 
                     <Download className='icon' />
                 </a>
             </div>
-            <Document file="files/resume.pdf">
-            <Page
-                pageNumber={1}
-                renderTextLayer
-                renderAnnotationLayer
-            />
-      </Document> 
+            <Document file="/files/resume.pdf">
+                <Page
+                    pageNumber={1}
+                    renderTextLayer
+                    renderAnnotationLayer
+                />
+            </Document>
         </>
     )
 }

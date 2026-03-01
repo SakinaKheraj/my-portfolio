@@ -13,15 +13,15 @@ const ImageFile = () => {
                 <p>{data?.name ?? "Image Viewer"}</p>
             </div>
 
-            <div className="preview">
+            <div className="preview h-full overflow-auto">
                 {data?.imageUrl ? (
                     <img
                         src={data.imageUrl}
                         alt={data.name}
-                        className="w-full h-full object-contain"
+                        className="w-full"
                     />
                 ) : (
-                    <div className="w-full h-full flex-center text-gray-400 italic">
+                    <div className="w-full h-full flex items-center justify-center text-gray-400 italic">
                         No image to display.
                     </div>
                 )}

@@ -43,6 +43,14 @@ const useWindowStore = create(
             const win = state.windows[windowKey];
             if (!win) return;
             win.isMaximized = !win.isMaximized;
+        }),
+
+        minimizeAllWindows: () => set((state) => {
+            Object.keys(state.windows).forEach((key) => {
+                if (state.windows[key].isOpen) {
+                    state.windows[key].isMinimized = true;
+                }
+            });
         })
     })));
 

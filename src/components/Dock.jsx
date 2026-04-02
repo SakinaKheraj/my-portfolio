@@ -5,13 +5,18 @@ import { useGSAP } from '@gsap/react';
 import { dockApps, locations } from '#constants';
 import useWindowStore from '../store/window.js';
 import useLocationStore from '../store/location.js';
+import useMobile from '#hooks/useMobile';
 
 const Dock = () => {
     const { openWindow, closeWindow, windows } = useWindowStore();
     const { setActiveLocation } = useLocationStore();
     const dockRef = useRef(null);
+    const isMobile = useMobile();
 
     useGSAP(() => {
+        // On mobile, the dock isn't rendered so skip all setup
+        if (isMobile) return;
+
         const dock = dockRef.current;
         if (!dock) return;
 
@@ -56,7 +61,10 @@ const Dock = () => {
             dock.removeEventListener('mousemove', handleMouseMove);
             dock.removeEventListener('mouseleave', resetIcons);
         };
-    }, []);
+    }, [isMobile]);
+
+    // All hooks called — now safe to return null for mobile
+    if (isMobile) return null;
 
 
     const toggleApp = (app) => {
